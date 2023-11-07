@@ -1,15 +1,18 @@
 package main.animals;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public abstract class HumanFriends {
     private int id;
     private String name;
-    private Date birthDate;
+    private LocalDate birthDate;
     private ArrayList<String> commands;
+    private HumanFriendsEnum humanFriendsEnum;
 
-    public HumanFriends(int id, String name, Date birthDate, ArrayList<String> commands) {
+    
+
+    public HumanFriends(int id, String name, LocalDate birthDate, ArrayList<String> commands) {
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
@@ -28,11 +31,11 @@ public abstract class HumanFriends {
         this.name = name;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -42,5 +45,13 @@ public abstract class HumanFriends {
 
     public void setCommands(ArrayList<String> commands) {
         this.commands = commands;
+    }
+    
+    public HumanFriendsEnum getHumanFriendsEnum() {
+        return humanFriendsEnum;
+    }
+
+    public void setHumanFriendsEnum(HumanFriendsEnum humanFriendsEnum) {
+        this.humanFriendsEnum = humanFriendsEnum;
     }
 }
