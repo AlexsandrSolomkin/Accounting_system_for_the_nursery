@@ -10,8 +10,6 @@ public abstract class HumanFriends {
     private ArrayList<String> commands;
     private HumanFriendsEnum humanFriendsEnum;
 
-    
-
     public HumanFriends(int id, String name, LocalDate birthDate, ArrayList<String> commands) {
         this.id = id;
         this.name = name;
