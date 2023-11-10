@@ -18,6 +18,6 @@ public class Presenter {
 
     public void addAnimals(String nameHF, LocalDate birthDateHF, ArrayList<String> commandsHF) {
         service.addAnimals(nameHF, birthDateHF, commandsHF);
-        System.out.println("Добавление товара");
+        System.out.println("Добавление животного");
     }
 }
