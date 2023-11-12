@@ -73,11 +73,14 @@ public class ConsoleUI implements View {
 
         while (flagAddCommand) {
             
-            System.out.println("To add a command, enter 1, to exit 2: ");
+            System.out.println("To add a command, enter '1', to exit '2': ");
             int answer = scanner.nextInt();
-
+            
             if (answer == 1) {
-                commands.add(scanner.nextLine());
+                System.out.println("Enter the command for the animal");
+                String fake = scanner.nextLine(); // <- затычка
+                String commandInput = scanner.nextLine();
+                commands.add(commandInput);
             } else if (answer == 2) {
                 flagAddCommand = false;
             }
