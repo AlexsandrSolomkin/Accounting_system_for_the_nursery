@@ -12,6 +12,7 @@ public class MainMenu {
     public MainMenu(View view) {
         this.view = view;
         commandList = new ArrayList<>();
+        commandList.add(new AddAnimals(view));
     }
 
     public String printMenu() {
