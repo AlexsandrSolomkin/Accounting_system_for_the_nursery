@@ -18,6 +18,11 @@ public class Presenter {
 
     public void addAnimals(String nameHF, LocalDate birthDateHF, ArrayList<String> commandsHF) {
         service.addAnimals(nameHF, birthDateHF, commandsHF);
-        System.out.println("adding");
+        System.out.println("Adding");
+    }
+
+    public void writeDataInFile(String path){
+        System.out.println("Data written");
+        service.writeDataInFile(path);
     }
 }

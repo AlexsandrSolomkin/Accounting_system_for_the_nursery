@@ -92,4 +92,12 @@ public class ConsoleUI implements View {
     public void setPresenter(Presenter presenter) {
         this.presenter = presenter;
     }
+
+    @Override
+    public void writeDataInFile() {
+        String pathFile = "main/database/dataFiles/database.txt";
+        presenter.writeDataInFile(pathFile);
+    }
+
+    
 }
