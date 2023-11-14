@@ -99,5 +99,9 @@ public class ConsoleUI implements View {
         presenter.writeDataInFile(pathFile);
     }
 
-    
+    @Override
+    public void exitWorkProgramm() {
+        System.out.println("Work is completed.");
+        flagWork = false;
+    }
 }

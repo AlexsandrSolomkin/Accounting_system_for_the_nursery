@@ -14,6 +14,7 @@ public class MainMenu {
         commandList = new ArrayList<>();
         commandList.add(new AddAnimals(view));
         commandList.add(new WriteDataInFile(view));
+        commandList.add(new ExitWorkProgramm(view));
     }
 
     public String printMenu() {
