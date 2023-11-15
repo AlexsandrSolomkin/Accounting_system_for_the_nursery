@@ -25,4 +25,9 @@ public class Presenter {
         System.out.println("Data written");
         service.writeDataInFile(path);
     }
+
+    public void readDataInFile(String path){
+        System.out.println("Data reading");
+        service.readDataInFile(path);
+    }
 }

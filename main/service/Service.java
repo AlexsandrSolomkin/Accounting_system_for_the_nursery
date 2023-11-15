@@ -32,4 +32,12 @@ public class Service {
         Writable writable = new FileHandler();
         writable.write(databaseList, path);
     }
+
+    public void readDataInFile(String path){
+        Writable writable = new FileHandler();
+        databaseList = (DatabaseList) writable.read(path);
+        //////////////////////////////////////////////
+        //System.out.println(databaseList.getInfo());
+        //////////////////////////////////////////////
+    }
 }

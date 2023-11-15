@@ -100,6 +100,12 @@ public class ConsoleUI implements View {
     }
 
     @Override
+    public void readDataInFile(){
+        String pathFile = "main/database/dataFiles/database.txt";
+        presenter.readDataInFile(pathFile);
+    }
+
+    @Override
     public void exitWorkProgramm() {
         System.out.println("Work is completed.");
         flagWork = false;
