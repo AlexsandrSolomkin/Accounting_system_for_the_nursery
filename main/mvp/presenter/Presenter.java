@@ -30,4 +30,9 @@ public class Presenter {
         System.out.println("Data reading");
         service.readDataInFile(path);
     }
+
+    public void getInfo(){
+        System.out.println("Data loading");
+        view.print(service.getInfo());
+    }
 }

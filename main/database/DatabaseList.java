@@ -26,23 +26,6 @@ public class DatabaseList implements Iterable<HumanFriends>, Serializable {
          return databaseList.get(index);
     }
 
-    public String getInfo() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Animals:\n");
-
-        for (HumanFriends animal : databaseList) {
-            stringBuilder.append("\n=============================");
-            stringBuilder.append("\nid: ")
-                    .append(animal.getId())
-                    .append("\nName: ")
-                    .append(animal.getName())
-                    .append("\nCommands: ")
-                    .append(animal.getCommands());
-            stringBuilder.append("\n=============================");
-        }
-        return stringBuilder.toString();
-    }
-
     @Override
     public Iterator<HumanFriends> iterator() {
         return new ObjectIterator(databaseList);

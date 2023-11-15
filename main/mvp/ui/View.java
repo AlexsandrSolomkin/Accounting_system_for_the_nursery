@@ -11,5 +11,6 @@ public interface View {
     void addAnimals();
     void writeDataInFile();
     void readDataInFile();
+    void getInfo();
     void exitWorkProgramm();
 }

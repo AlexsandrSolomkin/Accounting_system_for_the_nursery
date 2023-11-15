@@ -40,4 +40,21 @@ public class Service {
         //System.out.println(databaseList.getInfo());
         //////////////////////////////////////////////
     }
+
+    public String getInfo() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Animals:\n");
+
+        for (HumanFriends animal : databaseList) {
+            stringBuilder.append("\n=============================");
+            stringBuilder.append("\nid: ")
+                    .append(animal.getId())
+                    .append("\nName: ")
+                    .append(animal.getName())
+                    .append("\nCommands: ")
+                    .append(animal.getCommands());
+            stringBuilder.append("\n=============================");
+        }
+        return stringBuilder.toString();
+    }
 }

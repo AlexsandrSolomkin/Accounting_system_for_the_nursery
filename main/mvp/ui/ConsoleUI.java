@@ -110,4 +110,9 @@ public class ConsoleUI implements View {
         System.out.println("Work is completed.");
         flagWork = false;
     }
+
+    @Override
+    public void getInfo() {
+        presenter.getInfo();
+    }
 }
