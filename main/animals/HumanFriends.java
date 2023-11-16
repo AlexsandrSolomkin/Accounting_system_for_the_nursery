@@ -1,9 +1,10 @@
 package main.animals;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class HumanFriends {
+public abstract class HumanFriends implements Serializable{
     private int id;
     private String name;
     private LocalDate birthDate;

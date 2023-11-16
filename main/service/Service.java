@@ -36,9 +36,6 @@ public class Service {
     public void readDataInFile(String path){
         Writable writable = new FileHandler();
         databaseList = (DatabaseList) writable.read(path);
-        //////////////////////////////////////////////
-        //System.out.println(databaseList.getInfo());
-        //////////////////////////////////////////////
     }
 
     public String getInfo() {
@@ -51,6 +48,8 @@ public class Service {
                     .append(animal.getId())
                     .append("\nName: ")
                     .append(animal.getName())
+                    .append("\nBirth date: ")
+                    .append(animal.getBirthDate())
                     .append("\nCommands: ")
                     .append(animal.getCommands());
             stringBuilder.append("\n=============================");

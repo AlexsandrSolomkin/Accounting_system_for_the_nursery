@@ -106,13 +106,13 @@ public class ConsoleUI implements View {
     }
 
     @Override
-    public void exitWorkProgramm() {
-        System.out.println("Work is completed.");
-        flagWork = false;
+    public void getInfo() {
+        presenter.getInfo();
     }
 
     @Override
-    public void getInfo() {
-        presenter.getInfo();
+    public void exitWorkProgramm() {
+        System.out.println("Work is completed.");
+        flagWork = false;
     }
 }
