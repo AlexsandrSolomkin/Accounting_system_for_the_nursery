@@ -87,6 +87,19 @@ public class ConsoleUI implements View {
         }
         presenter.addAnimals(nameHumanFriend, birthDate, commands);
     }
+
+    @Override
+    public void addCommandAnimal() {
+        getInfo();
+
+        System.out.println("Inter id animal: ");
+        int idAnimal = scanner.nextInt();
+        System.out.println("New command: ");
+        String fake = scanner.nextLine(); // <- затычка
+        String newCommand = scanner.nextLine();
+
+        presenter.addCommandAnimal(idAnimal, newCommand);
+    }
     
     @Override
     public void setPresenter(Presenter presenter) {

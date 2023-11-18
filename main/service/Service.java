@@ -28,6 +28,15 @@ public class Service {
         databaseList.addHumanFriends(humanFriends);
     }
 
+    public void addCommandAnimal(int idAnimal, String newCommand) {
+        for (HumanFriends animal : databaseList) {
+            if (animal.getId() == idAnimal){
+                //ArrayList<String> newCommands = animal.getCommands();
+                animal.getCommands().add(newCommand);
+            }
+        }
+    }
+
     public void writeDataInFile(String path){
         Writable writable = new FileHandler();
         writable.write(databaseList, path);

@@ -2,20 +2,20 @@ package main.mvp.ui.commands;
 
 import main.mvp.ui.View;
 
-public class AddAnimals implements Command{
+public class AddCommandAnimal implements Command{
     private View view;
 
-    public AddAnimals(View view) {
+    public AddCommandAnimal(View view) {
         this.view = view;
     }
 
     @Override
     public String getDescription() {
-        return "Add animal";
+        return "Add command animal";
     }
 
     @Override
     public void execute() {
-        view.addAnimals();
+        view.addCommandAnimal();
     }
 }

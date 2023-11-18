@@ -9,6 +9,7 @@ public interface View {
     void setPresenter(Presenter presenter);
 
     void addAnimals();
+    void addCommandAnimal();
     void writeDataInFile();
     void readDataInFile();
     void getInfo();

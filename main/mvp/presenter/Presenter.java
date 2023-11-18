@@ -21,6 +21,11 @@ public class Presenter {
         System.out.println("Adding");
     }
 
+    public void addCommandAnimal(int idAnimal, String newCommand) {
+        service.addCommandAnimal(idAnimal, newCommand);
+        System.out.println("Adding new command");
+    }
+
     public void writeDataInFile(String path){
         System.out.println("Data written");
         service.writeDataInFile(path);
