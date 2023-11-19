@@ -8,11 +8,11 @@ import main.animals.pet.Pet;
 import main.database.DatabaseList;
 import main.database.workDatabase.FileHandler;
 import main.database.workDatabase.Writable;
+import main.mvp.ui.Counter;
 
 public class Service {
     private int id;
     private DatabaseList databaseList;
-
 
     public Service(DatabaseList databaseList) {
         this.databaseList = databaseList;

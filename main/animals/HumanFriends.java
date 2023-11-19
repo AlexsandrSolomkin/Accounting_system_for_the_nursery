@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public abstract class HumanFriends implements Serializable{
-    private int id;
+    private static int id;
     private String humanFriendsEnum;
     private String name;
     private LocalDate birthDate;
