@@ -7,7 +7,7 @@ import main.animals.HumanFriends;
 
 public class Pack extends HumanFriends{
 
-    public Pack(int id, String name, LocalDate birthDate, ArrayList<String> commands) {
-        super(id, name, birthDate, commands);
+    public Pack(int id, String humanFriendsEnum, String name, LocalDate birthDate, ArrayList<String> commands) {
+        super(id, humanFriendsEnum, name, birthDate, commands);
     }
 }

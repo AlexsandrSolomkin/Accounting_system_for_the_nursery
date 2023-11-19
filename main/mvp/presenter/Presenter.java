@@ -16,8 +16,8 @@ public class Presenter {
         view.setPresenter(this);
     }
 
-    public void addAnimals(String nameHF, LocalDate birthDateHF, ArrayList<String> commandsHF) {
-        service.addAnimals(nameHF, birthDateHF, commandsHF);
+    public void addAnimals(String humanFriendsEnumHF, String nameHF, LocalDate birthDateHF, ArrayList<String> commandsHF) {
+        service.addAnimals(humanFriendsEnumHF, nameHF, birthDateHF, commandsHF);
         System.out.println("Adding");
     }
 

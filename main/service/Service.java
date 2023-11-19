@@ -22,8 +22,8 @@ public class Service {
         this(new DatabaseList());
     }
 
-    public void addAnimals(String nameHF, LocalDate birthDateHF, ArrayList<String> commandsHF) {
-        HumanFriends humanFriends = new Pet(id++, nameHF, birthDateHF, commandsHF);
+    public void addAnimals(String humanFriendsEnumHF, String nameHF, LocalDate birthDateHF, ArrayList<String> commandsHF) {
+        HumanFriends humanFriends = new Pet(id++, humanFriendsEnumHF, nameHF, birthDateHF, commandsHF);
         // HumanFriends humanFriends = new Pack(id++, nameHF, birthDateHF, commandsHF);
         databaseList.addHumanFriends(humanFriends);
     }
@@ -31,7 +31,6 @@ public class Service {
     public void addCommandAnimal(int idAnimal, String newCommand) {
         for (HumanFriends animal : databaseList) {
             if (animal.getId() == idAnimal){
-                //ArrayList<String> newCommands = animal.getCommands();
                 animal.getCommands().add(newCommand);
             }
         }
@@ -55,6 +54,8 @@ public class Service {
             stringBuilder.append("\n=============================");
             stringBuilder.append("\nid: ")
                     .append(animal.getId())
+                    .append("\nAnimal: ")
+                    .append(animal.getHumanFriendsEnum())
                     .append("\nName: ")
                     .append(animal.getName())
                     .append("\nBirth date: ")

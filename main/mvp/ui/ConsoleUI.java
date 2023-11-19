@@ -2,8 +2,10 @@ package main.mvp.ui;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
+import main.animals.HumanFriendsEnum;
 import main.mvp.presenter.Presenter;
 
 public class ConsoleUI implements View {
@@ -61,6 +63,11 @@ public class ConsoleUI implements View {
     }
 
     public void addAnimals() {
+
+        System.out.println("Animal: ");
+        String humanFriendsEnum = elementArrayListEnum();
+        String fake2 = scanner.nextLine(); // <- затычка
+
         System.out.println("Name: ");
         String nameHumanFriend = scanner.nextLine();
 
@@ -72,7 +79,7 @@ public class ConsoleUI implements View {
         boolean flagAddCommand = true;
 
         while (flagAddCommand) {
-            
+
             System.out.println("To add a command, enter '1', to exit '2': ");
             int answer = scanner.nextInt();
             
@@ -85,7 +92,24 @@ public class ConsoleUI implements View {
                 flagAddCommand = false;
             }
         }
-        presenter.addAnimals(nameHumanFriend, birthDate, commands);
+        presenter.addAnimals(humanFriendsEnum, nameHumanFriend, birthDate, commands);
+    }
+
+    private String elementArrayListEnum(){
+        List<HumanFriendsEnum> animals = new ArrayList<>();
+
+        System.out.println("All animals: ");
+        for (HumanFriendsEnum HFEnum : HumanFriendsEnum.values()) {
+            animals.add(HFEnum);
+            System.out.printf("%d. ", animals.size());
+            System.out.println(HFEnum.getTitle());
+        }
+
+        System.out.println();
+        int elEnum = scanner.nextInt();
+        String animal = animals.get(elEnum - 1).getTitle();
+
+        return animal;        
     }
 
     @Override

@@ -6,13 +6,14 @@ import java.util.ArrayList;
 
 public abstract class HumanFriends implements Serializable{
     private int id;
+    private String humanFriendsEnum;
     private String name;
     private LocalDate birthDate;
     private ArrayList<String> commands;
-    private HumanFriendsEnum humanFriendsEnum;
 
-    public HumanFriends(int id, String name, LocalDate birthDate, ArrayList<String> commands) {
+    public HumanFriends(int id, String humanFriendsEnum, String name, LocalDate birthDate, ArrayList<String> commands) {
         this.id = id;
+        this.humanFriendsEnum = humanFriendsEnum;
         this.name = name;
         this.birthDate = birthDate;
         this.commands = commands;
@@ -20,6 +21,14 @@ public abstract class HumanFriends implements Serializable{
 
     public int getId() {
         return id;
+    }
+
+    public String getHumanFriendsEnum() {
+        return humanFriendsEnum;
+    }
+
+    public void setHumanFriendsEnum(String humanFriendsEnum) {
+        this.humanFriendsEnum = humanFriendsEnum;
     }
 
     public String getName() {
@@ -44,13 +53,5 @@ public abstract class HumanFriends implements Serializable{
 
     public void setCommands(ArrayList<String> commands) {
         this.commands = commands;
-    }
-    
-    public HumanFriendsEnum getHumanFriendsEnum() {
-        return humanFriendsEnum;
-    }
-
-    public void setHumanFriendsEnum(HumanFriendsEnum humanFriendsEnum) {
-        this.humanFriendsEnum = humanFriendsEnum;
     }
 }
